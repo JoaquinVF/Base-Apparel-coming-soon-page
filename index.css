@@ -130,6 +130,9 @@ form.error .error-text{
      color: hsl(228, 45%, 44%);
 }
 @media screen and (min-width: 700px){
+    body{
+        background-position: left;
+    }
     .container{
         text-align: left;
         min-height: 100vh;
