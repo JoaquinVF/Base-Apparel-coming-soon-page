@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.background1{
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg,hsl(0, 100%, 98%),hsl(0, 0%, 100%));
+}
+.container{
+    text-align: center;
+}
+#logo{
+    margin: 20px 0px 20px 30px;
+    height: 40px;
+}
+#pic{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+}
+.title{
+    position: relative;
+    color:hsl(0, 6%, 24%);
+    letter-spacing: 9px;
+    transform: translateX(-100%);
+    animation: comeinleft 0.5s ease forwards;
+    margin-top: 40px;
+    line-height: 1.1;
+    font-size: 43px;
+}
+@keyframes comeinleft{
+    to{
+        transform: translateX(0);
+    }
+}
+.we{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+.text{
+    font-size: 16px;
+    color: hsl(0, 36%, 70%);
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    font-weight: 400;
+    margin: 15px;
+}
+form{
+    display: flex;
+    margin: 0px 15px 0px 15px;
+}
+.placeholder{
+    position: relative;
+    font-weight: 400;
+    color: hsl(0, 36%, 70%);
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+    outline: none;
+}
+#search-button{
+    position: absolute;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 48px;
+    border-radius: 25px;
+    box-shadow: 0 2px 20px lightgrey;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+.attribution{ 
+    width: 100%;
+    font-size: 11px;
+    position: absolute;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.attribution a{
+     color: hsl(228, 45%, 44%);
+}
