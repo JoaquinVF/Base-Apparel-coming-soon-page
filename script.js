@@ -1,15 +1,19 @@
-let email = document.getElementById("email");
-let dangerIcon = document.getElementById("danger-button");
-let dangerText = document.getElementById("danger-text");
-let form = document.getElementById("form");
+const form = document.getElementById("form");
+const email = document.getElementById("email");
 
-form.addEventListener("submit", (e) => {
-    if (email.validity.typeMismatch) {
-        e.preventDefault();
-        dangerIcon.style.opacity = 1;
-        dangerText.style.opacity = 1;
-    } else {
-        dangerIcon.style.opacity = 0;
-        dangerText.style.opacity = 0;
-    }
-})
+form.addEventListener("submit", e => {
+   e.preventDefault();
+   const emailVal = email.value;
+
+   if(!validateEmail(emailVal)) {
+       form.classList.add("error");
+       form.classList.remove("success");
+   } else {
+       form.classList.remove("error");
+       form.classList.add("success");
+   }
+});
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}

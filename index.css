@@ -79,6 +79,9 @@ form.error{
 form.error .placeholder{
     border: 2px solid hsl(0, 93%, 68%);
 }
+form.success .placeholder{
+    border: 2px solid hsl(0, 80%, 86%);
+}
 #icon-error{
     position: absolute;
     top: 12px;
