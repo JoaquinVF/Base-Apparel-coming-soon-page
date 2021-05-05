@@ -118,6 +118,7 @@ button {
 	transition: opacity 0.2s ease;
 	height: 55px;
 	width: 100px;
+	-webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
